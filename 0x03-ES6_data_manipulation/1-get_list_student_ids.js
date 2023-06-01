@@ -1,5 +1,5 @@
 export default function getListStudentIds(array) {
-  if (array.constructor === Array) {
+  if (Array.isArray(array)) {
     return array.map((element) => element.id);
   }
   return [];
