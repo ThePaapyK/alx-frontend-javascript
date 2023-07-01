@@ -5,11 +5,11 @@ export default function updateUniqueItems(map) {
 
   const updatedMap = new Map();
 
-  for (const [item, quantity] of map.entries()) {
-    if (quantity === 1) {
-      updatedMap.set(item, 100);
+  for (const [key, value] of map) {
+    if (value === 1) {
+      updatedMap.set(key, 100);
     } else {
-      updatedMap.set(item, quantity);
+      updatedMap.set(key, value);
     }
   }
 

@@ -5,8 +5,7 @@ export default function cleanSet(set, startString) {
     return '';
   }
 
-  const list = [...set].filter((item) => typeof item === 'string' && item.startsWith(startString))
-                       .map((item) => item.slice(startString.length));
+  const list = [...set].filter((item) => typeof item === 'string' && item.startsWith(startString)).map((item) => item.slice(startString.length));
 
   return list.join('-');
 }
